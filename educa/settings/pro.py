@@ -6,7 +6,7 @@ ADMINS = (
     ('Codey Bot', 'codey@gmail.com'),
 )
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['host.docker.internal']
 
 DATABASES = {
    'default': {
@@ -17,3 +17,6 @@ DATABASES = {
        'PASSWORD': 'postgres'
    }
 }
+
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True

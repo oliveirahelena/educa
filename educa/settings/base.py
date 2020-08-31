@@ -1,7 +1,8 @@
-import environ
-from pathlib import Path
-from django.urls import reverse_lazy
 import os
+from pathlib import Path
+
+import environ
+from django.urls import reverse_lazy
 
 env = environ.Env()
 root_path = environ.Path(__file__) - 3
@@ -122,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
@@ -144,3 +146,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
