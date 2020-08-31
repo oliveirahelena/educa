@@ -10,6 +10,7 @@ django = "*"
 pillow = "*"
 django-environ = "*"
 django-braces = "*"
+django-embed-video = "*"
 
 [requires]
 python_version = "3.8"
