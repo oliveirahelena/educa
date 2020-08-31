@@ -4,13 +4,13 @@ from django.urls import reverse_lazy
 import os
 
 env = environ.Env()
-root_path = environ.Path(__file__) - 2
+root_path = environ.Path(__file__) - 3
 env.read_env(env_file=root_path(".env"))
 
 ENV = env("ENV", default="prod")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
